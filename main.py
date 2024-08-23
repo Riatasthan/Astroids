@@ -1,6 +1,6 @@
 import pygame
 
-def gamestart():
+def main():
     print("Starting asteroids!")
-
-gamestart()
+if __name__ == "__main__":
+    main()
