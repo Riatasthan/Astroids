@@ -10,8 +10,10 @@ from constants import *
 # Setting screen size 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+# Calls an infinte loop for a screen
 while True:
     pygame.Surface.fill(screen, (0, 255, 0))
+    
 
 # Main loop
 def main():
