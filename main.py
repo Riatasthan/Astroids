@@ -4,6 +4,9 @@ import pygame
 # Imporitng constants from constants file
 from constants import *
 
+# imports player from Player file
+from player import Player
+
 # Main loop
 def main():
     # Initalising the module
@@ -12,6 +15,7 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     # Clock and delta time
     clock = pygame.time.Clock()
+    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     dt = 0
     
     # Calls an infinte loop for a screen, and enables close/minimise button on pygame screen
@@ -20,6 +24,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill("black")
+        player.draw(screen)
         pygame.display.flip()
     
     #Limits FPS
