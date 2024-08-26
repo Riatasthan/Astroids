@@ -7,8 +7,7 @@ from constants import *
 # imports player from Player file
 from player import Player
 
-# imports asterios field
-from asteriodfield import AsteroidField
+
 
 # Main loop
 def main():
