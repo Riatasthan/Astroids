@@ -1,3 +1,6 @@
+# Import sys
+import sys
+
 # Importing module
 import pygame
 
@@ -47,6 +50,11 @@ def main():
 
         for obj in updatable:
             obj.update(dt)
+
+        for asteriod in asteroids:
+            if asteriod.collides_with(player):
+                print("Game over!")
+                sys.exit()
 
         screen.fill("black")
 
