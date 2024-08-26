@@ -7,7 +7,10 @@ from constants import *
 # imports player from Player file
 from player import Player
 
-# imports asterios field
+# inports asteriod
+from asteroid import Asteroid
+
+# imports asteriod field
 from asteriodfield import AsteroidField
 
 # Main loop
@@ -23,7 +26,13 @@ def main():
     # Create groups for objects
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
+    asteroids = pygame.sprite.Group()
 
+    Asteroid.containers = (asteroids, updatable, drawable)
+    AsteroidField.containers = updatable
+    asteriod_field = AsteroidField()
+    
+    
     Player.containers = (updatable, drawable)
    
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)

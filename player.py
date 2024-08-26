@@ -9,10 +9,11 @@ class Player(CircleShape):
         self.radius = PLAYER_RADIUS
         self.rotation = 0
     
+    # Draws the player as a triangle
+
     def draw(self, screen):
         pygame.draw.polygon(screen, "white", self.triangle(), 2)
     
-    # Draws the player as a triangle
     
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
