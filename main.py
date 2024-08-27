@@ -16,6 +16,8 @@ from asteroid import Asteroid
 # imports asteriod field
 from asteriodfield import AsteroidField
 
+from shot import Shot
+
 # Main loop
 def main():
     # Initalising the module
@@ -30,9 +32,11 @@ def main():
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
+    shots = pygame.sprite.Group()
 
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = updatable
+    Shot.containers = (shots, updatable, drawable)
     asteriod_field = AsteroidField()
     
     
@@ -42,7 +46,7 @@ def main():
 
     dt = 0
 
-   # Calls an infinte loop for a screen, and enables close/minimise button on pygame screen
+   # Calls an infinte loop for a screen, and enables close/minimise button on pygame screen, game over
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
